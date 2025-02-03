@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"contact test","testing the successful contact","SUCCESS","2025-01-31T10:43:48.2395537-05:00[America/Lima]","0.0","25.05"
+"login test","testing the successful login","SUCCESS","2025-01-31T10:44:53.284295-05:00[America/Lima]","0.0","19.78"

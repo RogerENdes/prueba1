@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">demoblaze</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="9c37cb5e8555eaa399427a985392e77b_rces_sl_features_sl_login_site.html">Login Test</a></span>
+                > <span class="truncate-60"><a
+                    href="570dec2eca0b2a4568d5a99a9343daba_hrome_comma_windows_login_site.html">testing the successful login </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="d782c44557441225cc92a5e35bf4b23b_requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 31-01-2025 10:44</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Login Test </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f4bfe10ad76acaea03f39cc8abe136d8_duration_10_to_30_seconds.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="b587a0a9274f8b6e3d8e0bb0ae8cb9bf_context_chrome.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="a396efb27cdfe5a722be3d67da3e0319_context_windows.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="e54337ba32bd5d52b2c4a3afe4819b97_context_chrome_c__windows.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">testing the successful login
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given the user is on the demoblaze<br>When attempts to log in<br><table class='embedded'><thead><th>user</th><th>pass</th></thead><tbody><tr><td>&lt;user&gt;</td><td>&lt;pass&gt;</td></tr></tbody></table><br>Then validate the text on screen &lt;message&gt;</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="99bd03b88653357230dc4ccce41c4392cb40c6505071b62aee001a37b860cb85.png" title=" 1: testing the successful login ({user=rogerUser, pass=123456, message=Welcome})" width="0"/>
+                <img src="99bd03b88653357230dc4ccce41c4392cb40c6505071b62aee001a37b860cb85.png" title=" Given the user is on the demoblaze" width="0"/>
+                <img src="99bd03b88653357230dc4ccce41c4392cb40c6505071b62aee001a37b860cb85.png" title=" mike opens the browser at https://www.demoblaze.com/index.html" width="0"/>
+                <img src="3a3e41bc7a288748c27656bc0cf0ab94ac1ba828f13726f79ed78d2d2cfdab39.png" title=" Given the user is on the demoblaze (completed)" width="0"/>
+                <img src="f314a97a9f6639b536d9ebbe707785c11a37c3bd82207e88bc4031e8a0cf1d17.png" title=" When attempts to log in
+| user | pass |
+| rogerUser | 123456 |" width="0"/>
+                <img src="f314a97a9f6639b536d9ebbe707785c11a37c3bd82207e88bc4031e8a0cf1d17.png" title=" Mike login on site" width="0"/>
+                <img src="f314a97a9f6639b536d9ebbe707785c11a37c3bd82207e88bc4031e8a0cf1d17.png" title=" mike clicks on Campo login" width="0"/>
+                <img src="7218e9715607a0defb373f3496f6c4395d25c070a32b503fd6fdefb0e40932fd.png" title=" mike clicks on Campo login" width="0"/>
+                <img src="3d4e45e279120d5243e432fef222eae435e8452a38c3a92e4c7d421acaaac35b.png" title=" mike clicks on Campo login (completed)" width="0"/>
+                <img src="72cfadc27e6b8ab78597b3845881418a88476d45af2053484ea8ea13ba003978.png" title=" mike enters 'rogerUser' into campo para nombre de usuario" width="0"/>
+                <img src="658dc614688daf3fdeaaa2920205f8d02ce61782cce2d14ad480bbc4723fc854.png" title=" mike enters 'rogerUser' into campo para nombre de usuario (completed)" width="0"/>
+                <img src="d47b36addc0dac1d90929aa5d7356279e1e6cffd3ff11d079afb1641acfd0381.png" title=" mike enters '123456' into campo para contrase&ntilde;a" width="0"/>
+                <img src="2f8440f6d16c530ccc95e22329b87f6ef506c90506a98d64b1280dcfe21a7a66.png" title=" mike enters '123456' into campo para contrase&ntilde;a (completed)" width="0"/>
+                <img src="73e8788f307313766eefca5cf63c7149b45686b2f85c007ad60440a4a4b168ad.png" title=" mike clicks on boton para login" width="0"/>
+                <img src="bc70235c26b5d9f4b6e611f90bc5aa79a4ed5913c002b2cf5a245f3ded3d907d.png" title=" mike clicks on boton para login" width="0"/>
+                <img src="f17df9063012f7621b8a73806e0a3566155f89777d8a4e6f60ebecf361ce0146.png" title=" mike clicks on boton para login (completed)" width="0"/>
+                <img src="f17df9063012f7621b8a73806e0a3566155f89777d8a4e6f60ebecf361ce0146.png" title=" Mike login on site (completed)" width="0"/>
+                <img src="99bd03b88653357230dc4ccce41c4392cb40c6505071b62aee001a37b860cb85.png" title=" When attempts to log in
+| user | pass |
+| rogerUser | 123456 | (completed)" width="0"/>
+                <img src="99bd03b88653357230dc4ccce41c4392cb40c6505071b62aee001a37b860cb85.png" title=" Then validate the text on screen Welcome" width="0"/>
+                <img src="611c40dd7f0e00fcd8c72082e374a3dbad90750dc04425601e3bd6626a5054de.png" title=" Then validate the messaje should be a string containing 'Welcome'" width="0"/>
+                <img src="611c40dd7f0e00fcd8c72082e374a3dbad90750dc04425601e3bd6626a5054de.png" title=" Then validate the text on screen Welcome (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.9.8</span>
+</div>
+</body>
+</html>
