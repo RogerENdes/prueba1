@@ -1,4 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"contact test","testing the successful contact","SUCCESS","2025-01-31T10:43:48.2395537-05:00[America/Lima]","0.0","25.05"
+"contact test","testing the successful contact","SUCCESS","2025-02-03T09:14:52.7968721-05:00[America/Lima]","0.0","15.31"
 "login test","testing the successful login","SUCCESS","2025-01-27T14:30:56.2371654-05:00[America/Lima]","0.0","0.33"
-"login test","testing the successful login","SUCCESS","2025-01-31T10:44:53.284295-05:00[America/Lima]","0.0","19.78"
+"login test","testing the successful login","SUCCESS","2025-02-03T08:48:17.2236193-05:00[America/Lima]","0.0","13.71"
